@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form | KUST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- University Header -->
+        <header class="university-header">
+            <div class="university-logo">
+                <img src="logo1.jpg" alt="KUST" width="80px" height="80px">
+            </div>
+
+            <div class="university-title">
+                <h1>Kohat University of Science & Technology</h1>
+                <h3>Institute of Computing</h3>
+            </div>
+        </header>
+
+        <!-- Assignment Information -->
+        <div class="assignment-info">
+            <p>CS371 Web Development</p>
+            <p>Course Incharge: Samina Amin</p>
+
+            <div class="course-details">
+                <span>Program: BSCS / BSSE</span>
+                <span>Semester: Fall 2026</span>
+            </div>
+
+            <hr>
+
+            <h2>Assignment # 02</h2>
+            <h3>Student Registration Form</h3>
+
+            <p class="description">
+                Please fill out the form below with your personal,
+                contact, and academic information.
+            </p>
+        </div>
+
+        <!-- Registration Form -->
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>1. Personal Information</legend>
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fathername">Father's Name</label>
+                    <input type="text" id="fathername" name="fathername"
+                           placeholder="Enter father's name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="options">
+                        <label>
+                            <input type="radio" name="gender"
+                                   value="Male" required> Male
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender"
+                                   value="Female"> Female
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender"
+                                   value="Other"> Other
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Contact Information -->
+            <fieldset>
+                <legend>2. Contact Information</legend>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="example@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone"
+                           placeholder="03XXXXXXXXX" required>
+                </div>
+            </fieldset>
+        
+            <!-- Academic Information -->
+            <fieldset>
+                <legend>3. Academic Information</legend>
+
+                <div class="form-group">
+                    <label for="registration">Registration Number</label>
+                    <input type="text" id="registration"
+                           name="registration"
+                           placeholder="Enter registration number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" name="department" required>
+                        <option value="">-- Select Department --</option>
+                        <option value="Computing">Institute of Computing</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Management">Management Sciences</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="degree">Degree Program</label>
+                    <select id="degree" name="degree" required>
+                        <option value="">-- Select Degree --</option>
+                        <option value="BSCS">BS Computer Science</option>
+                        <option value="BSSE">BS Software Engineering</option>
+                        <option value="BSIT">BS Information Technology</option>
+                        <option value="AI">BS Artificial Intelligence</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="semester">Semester</label>
+                    <select id="semester" name="semester" required>
+                        <option value="">-- Select Semester --</option>
+                        <option value="1">1st Semester</option>
+                        <option value="2">2nd Semester</option>
+                        <option value="3">3rd Semester</option>
+                        <option value="4">4th Semester</option>
+                        <option value="5">5th Semester</option>
+                        <option value="6">6th Semester</option>
+                        <option value="7">7th Semester</option>
+                        <option value="8">8th Semester</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Additional Fields -->
+            <fieldset>
+                <legend>4. Additional Fields</legend>
+
+                <div class="form-group">
+                    <label for="photo">Upload Photograph</label>
+                    <input type="file" id="photo" name="photo"
+                           accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label>Select Programs of Interest</label>
+
+                    <div class="options">
+                        <label>
+                            <input type="checkbox" name="programs[]"
+                                   value="SE"> Software Engineering
+                                   </label>
+
+                        <label>
+                            <input type="checkbox" name="programs[]"
+                                   value="CS"> Computer Science
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="programs[]"
+                                   value="AI"> Artificial Intelligence
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="programs[]"
+                                   value="Web"> Web Development
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Create Password</label>
+                    <input type="password" id="password" name="password"
+                           placeholder="Enter your password"
+                           minlength="8" required>
+                </div>
+            </fieldset>
+
+            <!-- Form Buttons -->
+            <div class="buttons">
+                <button type="submit" class="submit-btn">
+                    Submit
+                </button>
+
+                <button type="reset" class="reset-btn">
+                    Reset
+                </button>
+            </div>
+
+        </form>
+
+        <footer>
+            <p>&copy; 2026 Kohat University of Science & Technology</p>
+            <p>CS371 Web Development Assignment</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
